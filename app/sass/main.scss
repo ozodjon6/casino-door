@@ -1,0 +1,16 @@
+/* base */
+@import "./base/fonts";
+@import "./base/base";
+@import "./base/normalize";
+@import "./base/utilities";
+@import "./base/mixins";
+@import "./base/colors";
+
+/* page */
+@import "./page/hero.scss";
+@import "./page/main-page-heading";
+@import "./page/main-page__grid";
+@import "./page/footer";
+
+/* default */
+// @import './bootstrap-grid.scss';

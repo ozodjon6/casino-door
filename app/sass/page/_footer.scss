@@ -1,0 +1,62 @@
+.footer-page {
+  background: linear-gradient(67.2deg, #0b0c38 11.83%, #131746 82.23%);
+  box-shadow: 0px 30px 50px -50px #000000;
+  padding: 64px 0;
+  position: relative;
+
+  @include respond(desktop) {
+    padding: 32px 0;
+  }
+
+  @include respond(mobilemini) {
+    padding: 20px 0;
+  }
+}
+
+body.active .footer-page {
+  background: #f4f4f4;
+}
+
+.footer-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/bar.png");
+  background-position: left center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+.footer-page__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-page__logo svg {
+  color: #fff;
+}
+
+body.active .footer-page__logo svg {
+  color: #000000;
+}
+
+.footer-page__logo .site-logo-left {
+  margin-bottom: 0;
+  margin-right: 10px;
+  flex-shrink: 0;
+
+  @include respond(tabdesk) {
+    width: 33px;
+    height: 22px;
+  }
+}
+.footer-page__logo .site-logo-right {
+  @include respond(tabdesk) {
+    width: 124px;
+    height: 16px;
+  }
+}

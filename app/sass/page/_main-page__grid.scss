@@ -1,0 +1,755 @@
+.main-page {
+  margin-bottom: 32px;
+}
+
+.grid__item {
+  background: rgba(21, 31, 84, 0.7);
+  box-shadow: 0px 60px 20px -50px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  transition: background 0.3s;
+  cursor: pointer;
+  position: relative;
+
+  @include respond(desktop) {
+    justify-content: flex-start;
+  }
+
+  @include respond(phone) {
+    flex-wrap: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid__item-body {
+    display: flex;
+  }
+}
+
+.grid__item:hover {
+  background: rgba(49, 64, 138, 0.7);
+}
+.grid__item:hover .grid__item-number {
+  background: #f4a42b;
+}
+
+.grid__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.grid__item-number {
+  background: #212b7d;
+  box-shadow: 3px 0px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 0px 0px 20px;
+  width: 40px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
+  @include respond(mobilemini) {
+    width: 21px;
+    font-size: 16px;
+  }
+}
+
+.grid__content {
+  padding: 32px 50px 32px 48px;
+  // position: relative;
+
+  @include respond(phone) {
+    padding: 32px;
+  }
+
+  @include respond(mobilemini) {
+    padding: 10px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid__content {
+    position: relative;
+  }
+}
+
+.grid__content::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 15%;
+  width: 1px;
+  height: 70%;
+  background-color: #fff;
+
+  @include respond(desktop) {
+    display: none;
+  }
+}
+
+body.active .grid__content::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.grid__action {
+  padding: 32px 32px 32px 50px;
+
+  @include respond(phone) {
+    padding: 32px;
+  }
+
+  @include respond(mobilemini) {
+    padding: 10px;
+  }
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+
+  @include respond(mobilemini) {
+    align-items: flex-start;
+  }
+}
+
+.payment__number {
+  font-size: 24px;
+  line-height: 28px;
+  padding-right: 15px;
+  padding-left: 15px;
+  background: #f4a42b;
+  box-shadow: 3px 0px 11px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 0px 0px 20px;
+  font-weight: bold;
+  height: 100%;
+}
+
+.payment__img {
+  width: 140px;
+  height: 140px;
+  margin-right: 50px;
+
+  @include respond(mobilemini) {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
+}
+
+.payment__img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.payment__item {
+  display: flex;
+  align-items: center;
+}
+
+.payment__item:first-child .icon {
+  @include respond(mobilemini) {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.payment__item-mobile {
+  display: none;
+}
+
+h2.title {
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  margin-right: 13px;
+  margin-bottom: 10px;
+
+  @include respond(mobilemini) {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+  }
+}
+
+body.active h2.title {
+  color: #0b0c38;
+}
+
+body.active .fa.fa-star-o {
+  color: #d1d1d1;
+}
+
+.payment__rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  @include respond(mobilemini) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.payment__rating-wrap {
+  @include respond(mobilemini) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.payment__rating .grade {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-right: 10px;
+  margin-left: 10px;
+
+  @include respond(mobilemini) {
+    margin-left: 0;
+  }
+}
+
+body.active .payment__rating .grade {
+  color: #000000;
+}
+
+.payment__item-feedback {
+  font-size: 14px;
+  line-height: 16px;
+  color: #505ca5;
+
+  @include respond(mobilemini) {
+    display: block;
+  }
+}
+
+.pay-methods .title {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-weight: 500;
+
+  @include respond(mobilemini) {
+    display: none;
+  }
+}
+
+.pay-methods__icons .pay-icon {
+  margin-right: 10px;
+
+  @include respond(mobilemini) {
+    margin-right: 0;
+    margin-bottom: 8px;
+    width: 28px;
+    height: 19px;
+  }
+}
+
+.pay-methods__icons {
+  display: flex;
+  align-items: center;
+
+  @include respond(mobilemini) {
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+.pay-methods__more {
+  width: 39px;
+  height: 27px;
+  background: #525a8c;
+  border-radius: 5px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond(mobilemini) {
+    width: 28px;
+    height: 19px;
+    font-size: 8px;
+    line-height: 9px;
+  }
+}
+
+/* amount */
+
+.grid__action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(mobilemini) {
+    align-items: flex-start;
+  }
+}
+
+.amount {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 50px;
+  position: relative;
+
+  @include respond(mobilemini) {
+    padding-right: 21px;
+    align-items: flex-start;
+  }
+}
+
+.amount::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -55%;
+  width: 1px;
+  height: 211%;
+  background-color: #fff;
+
+  @include respond(desktop) {
+    height: 134%;
+    top: -15%;
+  }
+
+  @include respond(mobilemini) {
+    height: 83%;
+    top: 0%;
+  }
+}
+
+body.active .amount::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.amount strong {
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #f4a42b;
+  margin-bottom: 5px;
+
+  @include respond(mobilemini) {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.amount .text {
+  font-size: 20px;
+  line-height: 23px;
+  color: #ffffff;
+  text-align: center;
+
+  @include respond(mobilemini) {
+    font-size: 14px;
+    line-height: 16px;
+    text-align: left;
+  }
+}
+
+.support {
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include respond(mobilemini) {
+    padding-left: 15px;
+    flex-direction: column;
+  }
+}
+
+.support__list {
+  padding-right: 49px;
+
+  @include respond(mobilemini) {
+    padding-right: 25px;
+  }
+}
+
+.support__item {
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  font-weight: 400;
+  position: relative;
+
+  @include respond(mobilemini) {
+    font-size: 10px;
+    line-height: 9px;
+  }
+}
+
+body.active .support__item {
+  color: #000000;
+}
+
+.support__item::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  top: 50%;
+  margin-top: -2px;
+  left: -15px;
+}
+
+body.active .support__item::before {
+  background-color: #f4a42b;
+}
+
+.support__item:not(:last-child) {
+  margin-bottom: 20px;
+
+  @include respond(mobilemini) {
+    margin-bottom: 5px;
+  }
+}
+
+.support__btn {
+  background: linear-gradient(180deg, #527cdd 0%, #3e5aae 100%);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  font-size: 24px;
+  line-height: 28px;
+  padding: 11px 56px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: all 0.3s;
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+
+  @include respond(phone) {
+    padding: 11px 23px;
+    font-size: 18px;
+  }
+
+  @include respond(mobilemini) {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 5px 25px;
+    margin-top: 18px;
+    text-align: center;
+    white-space: unset;
+  }
+}
+
+.support__btn:hover {
+  background: #f4a42b;
+}
+
+.main-page__caption {
+  width: 288px;
+  height: 38px;
+  margin-top: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+/* change color on white on black */
+
+body.active .grid__item {
+  background-color: #fff;
+}
+
+body.active .main-page__heading-title {
+  color: #000;
+}
+
+body.active .main-page__heading-subtitle {
+  color: #b7b7b7;
+}
+
+body.active .toggle-btn {
+  background: rgba(240, 240, 240, 0.5);
+}
+
+body.active .toggle-btn__item svg {
+  color: #0b0c38;
+}
+
+/* horizontal--version */
+
+.grid.active .grid__item {
+  flex-direction: column;
+}
+
+body.active .grid.active > .grid__item {
+  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.1);
+}
+
+.grid.active {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -30px;
+  margin-top: -30px;
+  margin-bottom: -30px;
+
+  @include respond(tabdesk) {
+    margin-right: 0;
+    margin-top: -25px;
+  }
+}
+
+.grid.active .grid__item {
+  flex: 0 0 calc((100% - 3 * 30px) / 3);
+  max-width: calc((100% - 3 * 30px) / 3);
+  margin-right: 30px;
+  margin-top: 30px;
+
+  @media (max-width: 1400px) {
+    flex: 0 0 calc((100% - 2 * 30px) / 2);
+    max-width: calc((100% - 2 * 30px) / 2);
+  }
+
+  @include respond(tabdesk) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-top: 25px;
+  }
+}
+
+.grid.active .grid__item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.grid.active .grid__item-number {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+  padding: 5px 0;
+
+  @include respond(mobilemini) {
+    line-height: 19px;
+    padding: 0;
+  }
+}
+
+.grid.active .payment {
+  @include respond(mobilemini) {
+    justify-content: space-between;
+  }
+}
+
+.grid.active .payment__img {
+  width: 140px;
+  height: 140px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.grid.active .grid__content {
+  padding: 20px 14px;
+
+  @include respond(mobilemini) {
+    padding: 10px 8px 10px 10px;
+  }
+}
+
+.grid.active .grid__action {
+  padding: 20px 14px 30px;
+  // align-items: flex-start;
+  position: relative;
+  align-items: flex-start;
+
+  @include respond(mobilemini) {
+    // margin-bottom: 30px;
+    padding: 0;
+    align-items: center;
+  }
+}
+
+.grid.active .grid__action-mobile > .amount {
+  @include respond(mobilemini) {
+    display: none;
+  }
+}
+
+.grid.active .grid__action-mobile > .support > .support__list {
+  @include respond(mobilemini) {
+    display: none;
+  }
+}
+
+.grid.active .grid__item-body,
+.grid.active .grid__action {
+  flex-direction: column;
+}
+
+.grid.active .amount {
+  @include respond(mobilemini) {
+    // position: absolute;
+    // top: -65%;
+    // right: 32px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 10px;
+  }
+}
+
+.grid.active .payment__item-mobile {
+  @include respond(mobilemini) {
+    display: block;
+  }
+}
+
+.grid.active .amount::after {
+  display: none;
+
+  @include respond(mobilemini) {
+    // display: block;
+    // height: 1px;
+    // top: 100%;
+    // left: 0;
+    // width: 115%;
+    // margin-top: 10px;
+    // background-color: rgba(255, 255, 255, 0.2);
+    display: none;
+  }
+}
+
+.grid.active .grid__content::after {
+  bottom: 0;
+  top: 100%;
+  right: 5%;
+  width: 86%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include respond(desktop) {
+    display: block;
+    top: 50%;
+  }
+
+  @include respond(mobilemini) {
+    right: 13px;
+    top: 40%;
+    width: 34%;
+    display: none;
+  }
+}
+
+.grid.active .payment__item:first-child .title {
+  margin-bottom: 0;
+}
+
+.grid.active .payment__item:first-child {
+  margin-bottom: 10px;
+}
+
+.grid.active .support {
+  padding-top: 33px;
+  padding-left: 0;
+  margin: 0 auto;
+}
+
+.grid.active .payment__rating {
+  @include respond(mobilemini) {
+    position: relative;
+  }
+}
+
+.grid.active .payment__rating::after {
+  @include respond(mobilemini) {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 124%;
+    left: 0;
+    margin-top: 10px;
+    top: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.grid.active .fa {
+  @include respond(mobilemini) {
+    font-size: 16px;
+  }
+}
+
+.grid.active .star-rating {
+  @include respond(mobilemini) {
+    line-height: 24px;
+  }
+}
+
+.grid.active .support__list {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  padding-right: 0;
+
+  @include respond(desktop) {
+    padding-right: 30px;
+    padding-left: 15px;
+  }
+
+  @include respond(mobilemini) {
+    // right: 50px;
+    position: unset;
+    padding-right: 0;
+    padding-left: 15px;
+  }
+}
+
+.grid.active .support__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.grid.active .pay-methods__icons {
+  @include respond(mobilemini) {
+    flex-direction: unset;
+    top: 50%;
+    margin-top: 35px;
+    left: 10px;
+    flex-wrap: wrap;
+    max-width: 40%;
+  }
+}
+
+.grid.active .pay-methods__icons .pay-icon {
+  @include respond(mobilemini) {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+}
+
+.grid.active .pay-methods__more {
+  @include respond(mobilemini) {
+    margin-bottom: 5px;
+  }
+}
+
+.grid.active .support__btn {
+  @include respond(mobilemini) {
+    position: absolute;
+    padding: 5px 11px;
+    bottom: -10px;
+  }
+}
