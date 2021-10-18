@@ -399,15 +399,12 @@ template {
   background: -o-linear-gradient(22.8deg,#0b0c38 11.83%,#131746 82.23%);
   background: linear-gradient(67.2deg,#0b0c38 11.83%,#131746 82.23%);
   border-radius: 20px;
-  position: relative;
-  border-top: 4px solid #2e2f54;
-  border-right: 4px solid #2e2f54;
-  border-left: 4px solid #2e2f54
+  position: relative
 }
 .hero-page__inner::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 0;
   background-image: url(../images/hero.png),url(../images/cosmos.png);
   background-size: 477px 304px,contain;
   background-position: bottom -18px right 295px,center right 0;
@@ -478,7 +475,7 @@ body.active .header-page__col-left svg {
   .hero-page__inner::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 0;
     background-image: url(../images/hero.png),url(../images/cosmos.png);
     background-size: 377px 304px,500px 427px;
     background-position: bottom -18px right 202px,center right 0;
@@ -795,18 +792,24 @@ body.active .toggle-btn__item:first-child {
     flex-wrap: nowrap
   }
 }
+.grid__item:first-child {
+  background: rgba(49,64,138,.7)
+}
+.grid__item:first-child .grid__item-number {
+  background: #f4a42b
+}
+.grid__item:nth-child(2) .grid__item-number {
+  background: #3190a5
+}
+.grid__item:nth-child(3) .grid__item-number {
+  background: #2b6dd1
+}
 @media (min-width:1200px) {
   .grid__item-body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex
   }
-}
-.grid__item:hover {
-  background: rgba(49,64,138,.7)
-}
-.grid__item:hover .grid__item-number {
-  background: #f4a42b
 }
 .grid__item:not(:last-child) {
   margin-bottom: 20px
@@ -938,6 +941,12 @@ body.active .grid__content::after {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center
+}
+.payment__item:first-child {
+  margin-bottom: 10px
+}
+.payment__item:first-child h2 {
+  margin-bottom: 0
 }
 @media (max-width:767px) {
   .payment__item:first-child .icon {
@@ -1178,11 +1187,17 @@ body.active .amount::after {
     line-height: 28px
   }
 }
+.amount span {
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 5px
+}
 .amount .text {
   font-size: 20px;
   line-height: 23px;
   color: #fff;
-  text-align: center
+  text-align: center;
+  white-space: nowrap
 }
 @media (max-width:767px) {
   .amount .text {

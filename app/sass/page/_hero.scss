@@ -78,15 +78,15 @@
   background: linear-gradient(67.2deg, #0b0c38 11.83%, #131746 82.23%);
   border-radius: 20px;
   position: relative;
-  border-top: 4px solid #2e2f54;
-  border-right: 4px solid #2e2f54;
-  border-left: 4px solid #2e2f54;
+  // border-top: 4px solid #2e2f54;
+  // border-right: 4px solid #2e2f54;
+  // border-left: 4px solid #2e2f54;
 }
 
 .hero-page__inner::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 0px;
   background-image: url("../images/hero.png"), url("../images/cosmos.png");
   background-size: 477px 304px, contain;
   background-position: bottom -18px right 295px, center right 0px;
@@ -160,7 +160,7 @@ body.active .header-page__col-left svg {
   .hero-page__inner::after {
     content: "";
     position: absolute;
-    top: 8px;
+    top: 0px;
     background-image: url("../images/hero.png"), url("../images/cosmos.png");
     background-size: 377px 304px, 500px 427px;
     background-position: bottom -18px right 202px, center right 0px;
