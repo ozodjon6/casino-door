@@ -29,10 +29,10 @@
   background: #f4a42b;
 }
 .grid__item:nth-child(2) .grid__item-number {
-  background: #3190A5;
+  background: #3190a5;
 }
 .grid__item:nth-child(3) .grid__item-number {
-  background: #2B6DD1;
+  background: #2b6dd1;
 }
 
 @media (min-width: 1200px) {
@@ -176,6 +176,8 @@ body.active .grid__content::after {
   @include respond(mobilemini) {
     width: 12px;
     height: 12px;
+    flex-shrink: 0;
+    margin-top: -2px;
   }
 }
 
@@ -194,8 +196,9 @@ h2.title {
 
   @include respond(mobilemini) {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 18px;
     margin-bottom: 0px;
+    margin-right: 10px;
   }
 }
 
@@ -360,13 +363,17 @@ body.active .amount::after {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.amount__currency {
+  display: flex;
+  align-items: center;
+}
+
 .amount strong {
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
   font-weight: bold;
   color: #f4a42b;
-  margin-bottom: 5px;
 
   @include respond(mobilemini) {
     font-size: 24px;
@@ -377,7 +384,15 @@ body.active .amount::after {
 .amount span {
   font-weight: 500;
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 15px;
+  color: #f4a42b;
+  font-size: 32px;
+
+  @include respond(mobilemini) {
+    font-size: 24px;
+    margin-right: 5px;
+    align-self: center;
+  }
 }
 
 .amount .text {
@@ -455,6 +470,12 @@ body.active .support__item::before {
   }
 }
 
+@media (min-width: 1400px) {
+  .support__btn {
+    white-space: nowrap;
+  }
+}
+
 .support__btn {
   background: linear-gradient(180deg, #527cdd 0%, #3e5aae 100%);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -462,12 +483,19 @@ body.active .support__item::before {
   font-size: 24px;
   line-height: 28px;
   padding: 11px 56px;
+  display: block;
   text-decoration: none;
   color: #ffffff;
-  transition: all 0.3s;
+  // transition: all 0.3s;
   font-weight: bold;
   display: inline-block;
-  white-space: nowrap;
+  // white-space: nowrap;
+  position: relative;
+  z-index: 10;
+
+  @include respond(tabdesk) {
+    white-space: unset;
+  }
 
   @include respond(phone) {
     padding: 11px 23px;
@@ -480,12 +508,26 @@ body.active .support__item::before {
     padding: 5px 25px;
     margin-top: 18px;
     text-align: center;
-    white-space: unset;
   }
 }
 
-.support__btn:hover {
-  background: #f4a42b;
+.support__btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  background: linear-gradient(180deg, #ffc875 0%, #f4a42b 100%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+  border-radius: 100px;
+}
+
+.support__btn:hover::after {
+  opacity: 1;
 }
 
 .main-page__caption {
