@@ -118,7 +118,7 @@ body.active .grid__content::after {
   }
 
   @include respond(mobilemini) {
-    padding: 10px;
+    padding: 10px 10px 48px 10px;
   }
 }
 
@@ -425,7 +425,7 @@ body.active .amount::after {
   padding-right: 49px;
 
   @include respond(mobilemini) {
-    padding-right: 25px;
+    padding-right: 0px;
   }
 }
 
@@ -437,7 +437,7 @@ body.active .amount::after {
   position: relative;
 
   @include respond(mobilemini) {
-    font-size: 10px;
+    font-size: 8px;
     line-height: 9px;
   }
 }
@@ -456,6 +456,10 @@ body.active .support__item {
   top: 50%;
   margin-top: -2px;
   left: -15px;
+
+  @include respond(mobilemini) {
+    left: -10px;
+  }
 }
 
 body.active .support__item::before {
@@ -492,6 +496,7 @@ body.active .support__item::before {
   // white-space: nowrap;
   position: relative;
   z-index: 10;
+  text-align: center;
 
   @include respond(tabdesk) {
     white-space: unset;
@@ -506,8 +511,11 @@ body.active .support__item::before {
     font-size: 16px;
     line-height: 19px;
     padding: 5px 25px;
-    margin-top: 18px;
+    // margin-top: 18px;
     text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
   }
 }
 
@@ -821,5 +829,6 @@ body.active .grid.active > .grid__item {
     position: absolute;
     padding: 5px 11px;
     bottom: -10px;
+    right: auto;
   }
 }

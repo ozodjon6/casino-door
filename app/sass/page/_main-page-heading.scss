@@ -9,6 +9,10 @@
 
 .main-page__heading {
   margin-bottom: 30px;
+
+  @include respond(mobilemini) {
+    margin-bottom: 10px;
+  }
 }
 
 .main-page__heading-title {
@@ -20,10 +24,18 @@
   margin-bottom: 9px;
 }
 
+.main-page__heading-title:first-child {
+  @include respond(mobilemini) {
+    color: #F4A42B;
+  }
+}
+
 .main-page__heading-title.title-mobile {
   @include respond(mobilemini) {
     font-size: 16px;
     max-width: 300px;
+    line-height: 16px;
+    margin-bottom: 5px;
   }
 }
 
@@ -38,6 +50,7 @@
 
   @include respond(phone) {
     max-width: 300px;
+    line-height: 12px;
   }
 
   @include respond(mobilemini) {
@@ -56,7 +69,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 16px 18px;
+    padding: 14px;
     border-radius: 30px;
   }
 }
@@ -77,7 +90,7 @@
 
   @include respond(mobilemini) {
     padding-left: 0;
-    padding-top: 18px;
+    padding-top: 10px;
   }
 }
 
@@ -87,7 +100,7 @@
 
   @include respond(mobilemini) {
     padding-right: 0;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
     border-right: none;
     border-bottom: 1px solid #ffffff;
   }

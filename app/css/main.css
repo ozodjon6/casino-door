@@ -329,6 +329,11 @@ template {
     position: relative
   }
 }
+@media (max-width:767px) {
+  .hero-page {
+    margin-bottom: 10px
+  }
+}
 .header-page {
   padding: 30px 0 35px;
   -webkit-box-pack: justify;
@@ -448,7 +453,7 @@ h1.title {
 }
 @media (max-width:767px) {
   .hero-page__content {
-    margin-top: 40px
+    margin-top: 0
   }
 }
 .info-list__item {
@@ -458,6 +463,11 @@ h1.title {
 }
 .info-list__item:not(:last-child) {
   margin-bottom: 20px
+}
+@media (max-width:767px) {
+  .info-list__item:not(:last-child) {
+    margin-bottom: 10px
+  }
 }
 .info-list__item-icon {
   width: 30px;
@@ -486,7 +496,7 @@ h1.title {
 @media (max-width:767px) {
   .info-list__item--text {
     font-size: 12px;
-    line-height: 14px
+    line-height: 15px
   }
 }
 body.active .header-page__col-left svg {
@@ -554,8 +564,7 @@ body.active .header-page__col-left svg {
   .header-page__col-left {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
-    margin: 0 auto
+    justify-content: center
   }
   h1.title {
     font-size: 24px;
@@ -565,7 +574,7 @@ body.active .header-page__col-left svg {
 @media (max-width:991px) {
   .header-page {
     padding-top: 20px;
-    padding-bottom: 20px
+    padding-bottom: 10px
   }
   .hero-page__inner-col-left {
     max-width: 100%;
@@ -627,10 +636,13 @@ body.active .header-page__col-left svg {
 }
 @media (max-width:767px) {
   .hero-page__inner {
-    padding: 20px 7px 10px
+    padding: 30px 24px 14px 10px
   }
   .hero-page__inner-col-left {
-    max-width: 100%
+    max-width: 100%;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start
   }
   .hero-page__inner::after {
     content: "";
@@ -638,8 +650,8 @@ body.active .header-page__col-left svg {
     top: 8px;
     right: 0;
     background-image: url(../images/hero.png),url(../images/cosmos.png);
-    background-size: contain,contain;
-    background-position: left -15px center,center top 96px;
+    background-size: 104px 61px,167px 92px;
+    background-position: top 28px right 55px,top right -7px;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
@@ -657,7 +669,8 @@ body.active .header-page__col-left svg {
   }
   .site-logo-left {
     margin-bottom: 0;
-    margin-right: 11px
+    margin-right: 11px;
+    height: 23px
   }
   .site-logo-left svg {
     width: 33px;
@@ -667,19 +680,22 @@ body.active .header-page__col-left svg {
     content: "";
     position: absolute;
     right: 0;
-    top: 128px;
+    top: 30px;
     background-image: url(../images/coin.png);
-    background-size: contain;
-    background-position: center right;
+    background-size: 126px 126px;
+    background-position: top right;
     background-repeat: no-repeat;
     width: 100%;
     height: 285px;
     z-index: 1
   }
   h1.title {
-    font-size: 14px;
-    padding-bottom: 42vh;
-    line-height: 19px
+    font-size: 12px;
+    padding-bottom: 0;
+    line-height: 14px;
+    text-align: left;
+    max-width: 154px;
+    margin-bottom: 20px
   }
 }
 .main-page__heading,
@@ -699,6 +715,11 @@ body.active .header-page__col-left svg {
 .main-page__heading {
   margin-bottom: 30px
 }
+@media (max-width:767px) {
+  .main-page__heading {
+    margin-bottom: 10px
+  }
+}
 .main-page__heading-title {
   font-size: 24px;
   line-height: 28px;
@@ -708,9 +729,16 @@ body.active .header-page__col-left svg {
   margin-bottom: 9px
 }
 @media (max-width:767px) {
+  .main-page__heading-title:first-child {
+    color: #f4a42b
+  }
+}
+@media (max-width:767px) {
   .main-page__heading-title.title-mobile {
     font-size: 16px;
-    max-width: 300px
+    max-width: 300px;
+    line-height: 16px;
+    margin-bottom: 5px
   }
 }
 .main-page__heading-title strong {
@@ -723,7 +751,8 @@ body.active .header-page__col-left svg {
 }
 @media (max-width:768px) {
   .main-page__heading-subtitle {
-    max-width: 300px
+    max-width: 300px;
+    line-height: 12px
   }
 }
 @media (max-width:767px) {
@@ -751,7 +780,7 @@ body.active .header-page__col-left svg {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding: 16px 18px;
+    padding: 14px;
     border-radius: 30px
   }
 }
@@ -770,7 +799,7 @@ body.active .header-page__col-left svg {
 @media (max-width:767px) {
   .toggle-btn__item:last-child {
     padding-left: 0;
-    padding-top: 18px
+    padding-top: 10px
   }
 }
 .toggle-btn__item:first-child {
@@ -780,7 +809,7 @@ body.active .header-page__col-left svg {
 @media (max-width:767px) {
   .toggle-btn__item:first-child {
     padding-right: 0;
-    padding-bottom: 18px;
+    padding-bottom: 10px;
     border-right: none;
     border-bottom: 1px solid #fff
   }
@@ -927,7 +956,7 @@ body.active .grid__content::after {
 }
 @media (max-width:767px) {
   .grid__action {
-    padding: 10px
+    padding: 10px 10px 48px 10px
   }
 }
 .payment {
@@ -1293,7 +1322,7 @@ body.active .amount::after {
 }
 @media (max-width:767px) {
   .support__list {
-    padding-right: 25px
+    padding-right: 0
   }
 }
 .support__item {
@@ -1305,7 +1334,7 @@ body.active .amount::after {
 }
 @media (max-width:767px) {
   .support__item {
-    font-size: 10px;
+    font-size: 8px;
     line-height: 9px
   }
 }
@@ -1322,6 +1351,11 @@ body.active .support__item {
   top: 50%;
   margin-top: -2px;
   left: -15px
+}
+@media (max-width:767px) {
+  .support__item::before {
+    left: -10px
+  }
 }
 body.active .support__item::before {
   background-color: #f4a42b
@@ -1355,7 +1389,8 @@ body.active .support__item::before {
   font-weight: 700;
   display: inline-block;
   position: relative;
-  z-index: 10
+  z-index: 10;
+  text-align: center
 }
 @media (max-width:991px) {
   .support__btn {
@@ -1373,8 +1408,10 @@ body.active .support__item::before {
     font-size: 16px;
     line-height: 19px;
     padding: 5px 25px;
-    margin-top: 18px;
-    text-align: center
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    right: 10px
   }
 }
 .support__btn::after {
@@ -1674,7 +1711,8 @@ body.active .grid.active > .grid__item {
   .grid.active .support__btn {
     position: absolute;
     padding: 5px 11px;
-    bottom: -10px
+    bottom: -10px;
+    right: auto
   }
 }
 .footer-page {
