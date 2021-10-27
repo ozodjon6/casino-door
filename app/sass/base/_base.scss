@@ -123,27 +123,14 @@ body.active {
     padding-left: 15px;
   }
 
-  .amount::after {
-    display: none;
-  }
+  // .amount::after {
+  //   display: none;
+  // }
 
   .grid__action {
     position: relative;
   }
 
-  .grid__action::before {
-    content: "";
-    position: absolute;
-    height: 70%;
-    width: 1px;
-    background-color: #fff;
-    top: 15%;
-    left: 27%;
-  }
-
-  .grid.active .grid__action::before {
-    display: none;
-  }
 }
 @media (max-width: 767px) {
   .container {
