@@ -1634,6 +1634,12 @@ body.active .grid.active > .grid__item {
     margin-bottom: 10px
   }
 }
+.grid.active .amount::before {
+  top: -20px;
+  width: 169%;
+  height: 1px;
+  background-color: rgba(255,255,255,.2)
+}
 @media (max-width:767px) {
   .grid.active .payment__item-mobile {
     display: block
